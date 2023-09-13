@@ -25,7 +25,7 @@ function getRGB() {
   return rgbValue;
 }
 
-// get the final color and change the background to that color
+// get the final color using getRGB function and change the background to that color
 function randomColor() {
   color = `rgb(${getRGB()}, ${getRGB()}, ${getRGB()})`
   document.body.style.backgroundColor = color; // https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
@@ -40,7 +40,7 @@ function getRandomQuote() {
 
 /* 
   print the quote given the guidance in the project instructions
-  run the getRandomQuote function and the randomColor function
+  calls the getRandomQuote function and the randomColor function
 */
 function printQuote() {
   getRandomQuote()
@@ -55,7 +55,7 @@ function printQuote() {
     htmlString += `<span class = "year"> ${randomQuote.year} </span> </p>`
   }
   if (randomQuote.tag) {
-    htmlString += `<span class = "year"> ${randomQuote.tag} </span> </p>`
+    htmlString += `<span class = "tag"> ${randomQuote.tag} </span> </p>`
   }
   '</p>'
   document.getElementById('quote-box').innerHTML = htmlString;
@@ -64,8 +64,10 @@ function printQuote() {
 // automatically change the quote every 5 seconds
 // source: https://www.w3schools.com/jsref/met_win_setinterval.asp
 function autoRefresh () {
-  setInterval(printQuote, 3000);
+  setInterval(printQuote, 5000);
 }
+
+// call autoRefresh function
 autoRefresh();
 
 /***
