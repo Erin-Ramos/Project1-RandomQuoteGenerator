@@ -63,12 +63,13 @@ function printQuote() {
 
 // automatically change the quote every 5 seconds
 // source: https://www.w3schools.com/jsref/met_win_setinterval.asp
+
 function autoRefresh () {
   setInterval(printQuote, 5000);
 }
 
-// call autoRefresh function
-autoRefresh();
+// call autoRefresh function - Turned off for demo
+// autoRefresh(); 
 
 /***
  * click event listener for the print quote button
